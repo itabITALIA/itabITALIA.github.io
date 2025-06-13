@@ -16,6 +16,7 @@
       background: linear-gradient(to bottom, #000000, #1a1a1a);
       color: #e0e0e0;
       overflow-x: hidden;
+      padding-bottom: 40px; /* Aggiungi spazio per il ticker in basso */
     }
     header {
       background: #ff0000;
@@ -52,7 +53,6 @@
       display: block;
       border: 5px solid red;
       box-shadow: 0 0 40px red;
-      transform: rotate(-1deg);
     }
     section {
       max-width: 900px;
@@ -83,7 +83,7 @@
     }
     .ticker {
       position: fixed;
-      bottom: 0;
+      bottom: 0; /* Fissa il ticker alla base */
       width: 100%;
       background: #ff0000;
       color: black;
@@ -91,6 +91,10 @@
       white-space: nowrap;
       overflow: hidden;
       z-index: 999;
+      height: 30px; /* Altezza più schiacciata */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .ticker span {
       display: inline-block;
@@ -138,7 +142,7 @@
   </div>
 
   <footer>
-    © 2025 ITAB — Nessun potere sopra di noi. Nessuna patria, nessuna prigione.
+    <!-- Copyright rimosso -->
   </footer>
 
   <script>
