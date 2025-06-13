@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITAB - Il Tuono Anarchico d'Italia</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Special+Elite&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Special Elite', monospace;
+      background: linear-gradient(to bottom, #000000, #1a1a1a);
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+    header {
+      background: #ff0000;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 0 20px red;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #fff;
+      letter-spacing: 3px;
+      animation: flicker 1.5s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+    #slogan {
+      font-size: 1.5rem;
+      color: #ffcc00;
+      margin-top: 0.5rem;
+      animation: slideIn 3s ease-out;
+    }
+    @keyframes slideIn {
+      0% { transform: translateY(-30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    .flag {
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+      display: block;
+      border: 5px solid red;
+      box-shadow: 0 0 40px red;
+      transform: rotate(-1deg);
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #111;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+      animation: fadeIn 2s ease-in;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #ff0000;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 5px #ff0000;
+    }
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    footer {
+      background: #222;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 2rem;
+    }
+    .ticker {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #ff0000;
+      color: black;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      z-index: 999;
+    }
+    .ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker 20s linear infinite;
+    }
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ITAB</h1>
+    <div id="slogan">Il Tuono Anarchico d'Italia</div>
+  </header>
+
+  <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Anarchist_black_flag.svg/1200px-Anarchist_black_flag.svg.png" alt="Bandiera ITAB">
+
+  <section>
+    <h2>IL MANIFESTO</h2>
+    <p>
+      Noi di ITAB non siamo un partito: siamo un grido. Siamo la scintilla che incendia le catene, il fuoco che brucia l'autorità e l'apatia. 
+      Crediamo in un'Italia libera da gerarchie, da padroni e da burattinai. Lottiamo per l'autonomia radicale degli individui, la solidarietà reale, 
+      e l'autogestione totale. Ogni piazza è il nostro parlamento. Ogni cuore ribelle è un nostro compagno. Non chiediamo il permesso: prendiamo ciò che è nostro.
+    </p>
+  </section>
+
+  <section>
+    <h2>COMUNICATI</h2>
+    <p>
+      <strong>[13 Giugno 2025]</strong> — ITAB occupa simbolicamente i server digitali dell'informazione venduta, lanciando la campagna #OltreLaNebbia.<br><br>
+      <strong>[7 Giugno 2025]</strong> — Assemblea aperta a Napoli: "Autogestione, Orizzontalità, Futuro".<br><br>
+      <strong>[31 Maggio 2025]</strong> — Nasce il collettivo ITAB-Roma: la capitale ascolterà il caos.
+    </p>
+  </section>
+
+  <div class="ticker">
+    <span>NESSUN POTERE SOPRA DI NOI — OGNI COSCIENZA È UNA MICCIA — ITAB SI DIFFONDE NELL'OMBRA E ILLUMINA IL CAOS —</span>
+  </div>
+
+  <footer>
+    © 2025 ITAB — Nessun potere sopra di noi. Nessuna patria, nessuna prigione.
+  </footer>
+
+  <script>
+    // Effetto glitch sul titolo a intervalli random
+    const title = document.querySelector('header h1');
+    function glitchEffect() {
+      const original = title.textContent;
+      title.textContent = 'I7@B';
+      setTimeout(() => {
+        title.textContent = original;
+      }, 150);
+    }
+    setInterval(glitchEffect, Math.random() * 3000 + 2000);
+  </script>
+</body>
+</html>
